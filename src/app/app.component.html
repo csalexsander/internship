@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light" style="background: #81dbff">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/logo.png" width="150" class="d-inline-block align-top" alt="">
+  </a>
+</nav>
+<nav id="Menu" class="navbar navbar-expand-lg navbar-light" style="background: #81dbff"> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="container-fluid">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><button class="btn btn-primary">Home</button></li>
+        <li class="nav-item"><button (click)="ExibirEstagiarios()" class="btn btn-primary">Estagiarios</button></li>
+        <li class="nav-item"><button (click)="ExibirOrientadores()" class="btn btn-primary">Orientadores</button></li>
+        <li class="nav-item"><button class="btn btn-primary">Consultas</button></li>
+        <li class="nav-item"><button class="btn btn-primary">Relatorios</button></li>      
+    </ul>
+</div>
+</div>
+</nav>
+<div *ngIf="EstagioExibir">
+  <app-estagiarios></app-estagiarios>
+</div>
+<div *ngIf="OrientadoresExibir">
+  <app-orientadores></app-orientadores>
+</div>
