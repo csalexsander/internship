@@ -1,6 +1,11 @@
 <div class="card-body">
   <div class="row">
     <div class="col-md-12">
+      <h3>Estagiarios</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link" id="cadastro-tab" data-toggle="tab" href="#cadastro" role="tab" aria-controls="cadastro" aria-selected="true">Cadastro</a>
@@ -9,7 +14,7 @@
           <a class="nav-link active" id="lista-tab" data-toggle="tab" href="#lista" role="tab" aria-controls="lista" aria-selected="false">Lista</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="horarios-tab" data-toggle="tab" href="#horarios" role="tab" aria-controls="horarios" aria-selected="false">Horarios</a>
+          <a class="nav-link disabled"  id="horarios-tab" data-toggle="tab" href="#horarios" role="tab" aria-controls="horarios" aria-selected="false">Horarios</a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
@@ -53,8 +58,8 @@
                     </select>
                   </div>
                   <div class="form-group col-md-2">
-                    <label for="Turno">Turno</label>
-                    <input type="number" max="20" class="form-control" id="Turno" placeholder="Turno">
+                    <label for="Periodo">Periodo</label>
+                    <input type="number" max="20" class="form-control" id="Periodo" placeholder="Periodo"/>
                   </div>
                   <div class="form-group col-md-5">
                     <label for="TipoEstagio">Tipo</label>
@@ -63,8 +68,8 @@
                         <option value="1">Obrigatorio</option>
                         <option value="2">Opicional</option>
                       </select>
-                  </div>
                 </div>
+              </div>
                 <div class="box-actions pull-rigth">
                   <button type="submit" style="margin: 5px" class="btn btn-primary">Salvar</button>
                   <button id="editar" style="margin: 5px" class="btn btn-warning">Editar</button>
@@ -73,8 +78,8 @@
               </fieldset>
             </form>
            </div>
+          </div>
          </div>
-        </div>
         <div class="tab-pane fade show active" id="lista" role="tabpanel" aria-labelledby="lista-tab">
             <div class="card">
                 <div class="card-body">

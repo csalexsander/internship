@@ -1,28 +1,264 @@
 <div class="card-body">
     <div class="row">
-      <div class="col-md-12">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link" id="cadastro-tab" data-toggle="tab" href="#cadastro" role="tab" aria-controls="cadastro" aria-selected="true">Cadastro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" id="lista-tab" data-toggle="tab" href="#lista" role="tab" aria-controls="lista" aria-selected="false">Lista</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="horarios-tab" data-toggle="tab" href="#horarios" role="tab" aria-controls="horarios" aria-selected="false">Horarios</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade" id="cadastro" role="tabpanel" aria-labelledby="cadastro-tab">
-           
+        <div class="col-md-12">
+            <h3>Orientadores</h3>
+        </div>
+      </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" id="cadastro-tab" data-toggle="tab" href="#cadastro" role="tab" aria-controls="cadastro" aria-selected="true">Cadastro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" id="lista-tab" data-toggle="tab" href="#lista" role="tab" aria-controls="lista" aria-selected="false">Lista</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="horarios-tab" data-toggle="tab" href="#horarios" role="tab" aria-controls="horarios" aria-selected="false">Vincular Estagiario</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="cadastro" role="tabpanel" aria-labelledby="cadastro-tab">
+         <div class="card">
+           <div class="card-body">
+            <form role="form">
+              <fieldset>
+                <div class="row">
+                  <div class="form-group col-md-3">
+                    <label for="matricula">Matricula</label>
+                    <input type="text" class="form-control" id="matricula" placeholder="Insira a matricula">
+                  </div>
+                  <div class="form-group col-md-9">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" class="form-control" id="nome" placeholder="Insira o nome completo">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-3">
+                    <label for="TelefoneP">Telefone Principal</label>
+                    <input type="text" name="TelefoneP" id="TelefoneP" placeholder="Informe o Telefone Principal" class="form-control">
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="TelefoneS">Telefone Secundario</label>
+                    <input type="text" name="TelefoneS" id="TelefoneS" placeholder="Informe um telefone Adicional" class="form-control">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="Email">Email</label>
+                    <input type="email" name="Email" id="Email" placeholder="Informe o Email" class="form-control">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="Titulacao">Turno</label>
+                    <select name="Titulacao" id="Titulacao" class="form-control">
+                      <option value="0">Selecione</option>
+                      <option value="1">Graduado(a)</option>
+                      <option value="2">Especialista</option>
+                      <option value="3">Mestre</option>
+                      <option value="4">Doutor(a)</option>
+                      <option value="5">PHD</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="Abordagem">Abordagem</label>
+                    <input type="text" name="Abordagem" id="Abordagem" placeholder="Informe a Abordagem" class="form-control">
+                </div>
+              </div>
+                <div class="box-actions pull-rigth">
+                  <button type="submit" style="margin: 5px" class="btn btn-primary">Salvar</button>
+                  <button id="editar" style="margin: 5px" class="btn btn-warning">Editar</button>
+                  <button style="margin: 5px" class="btn btn-danger">Cancelar</button>
+                </div>
+              </fieldset>
+            </form>
+           </div>
           </div>
-          <div class="tab-pane fade show active" id="lista" role="tabpanel" aria-labelledby="lista-tab">
-              
-          </div>
-          <div class="tab-pane fade" id="horarios" role="tabpanel" aria-labelledby="horarios-tab">
-            Horarios
-          </div>
+         </div>
+        <div class="tab-pane fade show active" id="lista" role="tabpanel" aria-labelledby="lista-tab">
+            <div class="card">
+                <div class="card-body">
+          <table class="table" id="TabelaOrientadores" name="TabelaOrientadores">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Matricula</th>
+                <th scope="col">Nome Completo</th>
+                <th scope="col">Abordagem</th>
+                <th scope="col">Status</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1717</th>
+                <td>Thales Takao</td>
+                <td>Engenharia da Computação</td>
+                <td>Ativo</td>
+                <td><div class="btn-group">
+                  <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span><i class="fab fa-whmcs"></i></span> Ação
+                  </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"></a>
+                    <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                  </div>
+                </div></td>
+              </tr>
+              <tr>
+                <th scope="row">1513</th>
+                <td>Mateus Thornton</td>
+                <td>Engenharia de Alimentos</td>
+                <td>Inativo</td>
+                <td><div class="btn-group">
+                  <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span><i class="fab fa-whmcs"></i></span> Ação
+                  </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"></a>
+                    <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                  </div>
+                </div></td>
+              </tr>
+              <tr>
+                <th scope="row">2022</th>
+                <td>Geraldo Silva</td>
+                <td>Direito</td>
+                <td>Ativo</td>
+                <td><div class="btn-group">
+                  <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span><i class="fab fa-whmcs"></i></span> Ação
+                  </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#"></a>
+                    <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                  </div>
+                </div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+        <div class="tab-pane fade" id="horarios" role="tabpanel" aria-labelledby="horarios-tab">
+            <div class="card">
+                <div class="card-body">
+                 <form role="form">
+                   <fieldset>
+                     <legend>Professor</legend>
+                     <div class="row">
+                      <div class="form-group col-md-3">
+                        <label for="MatriculaProfessor">Matricula</label>
+                        <input type="text" name="MatriculaProfessor" id="MatriculaProfessor" class="form-control" placeholder="Matricula Professor">
+                      </div>
+                      <div class="form-group col-md-9">
+                        <label for="NomeCompletoProfessor">Nome Professor</label>
+                        <input type="text" name="NomeCompletoProfessor" id="NomeCompletoProfessor" readonly class="form-control">
+                      </div>
+                     </div>
+                     </fieldset>
+                     <fieldset>
+                       <legend>Estagiario</legend>
+                       <div class="row">
+                          <div class="form-group col-md-3">
+                            <label for="MatriculaEstagiario">Matricula</label>
+                            <input type="text" name="MatriculaEstagiario" id="MatriculaEstagiario" class="form-control">
+                          </div>
+                          <div class="form-group col-md-9">
+                            <label for="NomeCompletoEstagiario">Nome Estagiario</label>
+                            <input type="text" name="NomeCompletoEstagiario" id="NomeCompletoEstagiario" readonly class="form-control">
+                          </div>
+                         </div>
+                         <div class="row">
+                           <div class="form-group col-md-3">
+                             <label for="DataInicio">Data Inicio</label>
+                             <input type="date" name="DataInicio" id="DataInicio" class="form-control">
+                           </div>
+                           <div class="form-group col-md-3">
+                              <label for="DataFinal">Data Fim</label>
+                              <input type="date" name="DataFinal" id="DataFinal" class="form-control">
+                            </div>
+                            <div class="box-actions col-md-6 float-right" aling="left">
+                                <button type="submit" style="margin: 34 5 5 5" class="btn btn-primary col-md-5">Salvar</button>
+                                <button  style="margin: 34 5 5 5" class="btn btn-danger col-md-5">Cancelar</button>
+                              </div>
+                       </div>
+                     </fieldset>
+                     <fieldset>
+                       <legend>Lista</legend>
+                       <table class="table" id="TabelaRelacao" name="TabelaRelacao">
+                        <thead class="thead-light">
+                          <tr>
+                            <th scope="col">Matricula</th>
+                            <th scope="col">Nome Completo</th>
+                            <th scope="col">Ação</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1717</th>
+                            <td>Thales Takao</td>
+                            <td><div class="btn-group">
+                              <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <span><i class="fab fa-whmcs"></i></span> Ação
+                              </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1513</th>
+                            <td>Mateus Thornton</td>
+                            <td><div class="btn-group">
+                              <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <span><i class="fab fa-whmcs"></i></span> Ação
+                              </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                              </div>
+                            </div></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2022</th>
+                            <td>Geraldo Silva</td>
+                            <td><div class="btn-group">
+                              <button type="button" class="btn btn-defaut dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <span><i class="fab fa-whmcs"></i></span> Ação
+                              </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#"></a>
+                                <a class="dropdown-item" href="#"><span><i class="far fa-eye"></i></span> Visualizar</a>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-edit"></i></span> Editar</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><span><i class="fas fa-trash-alt"></i></span> Excluir</a>
+                              </div>
+                            </div></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                     </fieldset>
+                     </form>
+                     </div>
+                     </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<script src="https://pastebin.com/dl/eRrR4xbA"></script>
